@@ -323,7 +323,7 @@ Traces appear in **CloudWatch**, **Datadog**, or **Honeycomb** depending on conf
 curl -X POST https://api.example.com/sessions
 ```
 
-#### Response
+#### Response1
 
 ```json
 { "sessionId": "f9a1c33d-abc4-4891-bd4a-9b32a0fef111" }
@@ -337,7 +337,7 @@ curl -X POST https://api.example.com/chat/f9a1c33d-abc4-4891-bd4a-9b32a0fef111 \
   -d '{"message": "Explain AWS Lambda in simple terms."}'
 ```
 
-#### Response
+#### Response2
 
 ```json
 {
