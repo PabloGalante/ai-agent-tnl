@@ -1,6 +1,6 @@
 # LangGraph Conversational Agent
 
-[![Build](https://img.shields.io/github/actions/workflow/status/yourusername/langgraph-aws-agent/ci-cd.yml?label=CI%2FCD)](https://github.com/yourusername/langgraph-aws-agent/actions)
+[![Build](https://img.shields.io/github/actions/workflow/status/PabloGalante/langgraph-aws-agent/ci-cd.yml?label=CI%2FCD)](https://github.com/PabloGalante/langgraph-aws-agent/actions)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Node](https://img.shields.io/badge/Node-20%2B-339933?logo=node.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
@@ -35,8 +35,8 @@ This agent is a **modular conversational framework** that runs on AWS using **La
 
 ```mermaid
 flowchart LR
-    Client[Client / Webhook] --> APIGW[API Gateway (HTTP)]
-    APIGW --> Lambda[Lambda (Node.js + TypeScript)]
+    Client[Client / Webhook] --> APIGW[API Gateway HTTP]
+    APIGW --> Lambda[Lambda Node.js + TypeScript]
     Lambda --> LG[LangGraph Engine]
     LG -->|state| DDB[(DynamoDB Sessions)]
     LG -->|tools| AWS_SDK[(AWS SDK Tools)]
@@ -224,7 +224,7 @@ This will create:
 
 ```mermaid
 flowchart TD
-  A[Push to main / PR] --> B[Build & Test (pnpm, Vitest)]
+  A[Push to main / PR] --> B[Build & Test with pnpm and Vitest]
   B --> C[Docker Build]
   C --> D[ECR Push]
   D --> E[Terraform Apply]
